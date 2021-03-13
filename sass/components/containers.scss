@@ -1,0 +1,33 @@
+/* Общие параметры для контейнеров */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: baseline;
+    margin-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__project-list {
+    padding-bottom: 94px;
+  }
+
+  &__advantages {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+}
