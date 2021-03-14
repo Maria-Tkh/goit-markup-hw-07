@@ -21,13 +21,14 @@
     padding-bottom: 60px;
   }
 
-  &__project-list {
-    padding-bottom: 94px;
-  }
-
   &__advantages {
     display: flex;
     margin: auto;
     justify-content: center;
+  }
+
+  &__project-list {
+    padding-bottom: 94px;
+    background-color: $white;
   }
 }

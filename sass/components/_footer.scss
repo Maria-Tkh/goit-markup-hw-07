@@ -49,18 +49,17 @@
 
 /* Задаём характеристики иконок соцсетей */
 
-.social-links__footer {
+.social-links-footer {
   display: flex;
   justify-content: space-between;
   padding-left: 0px;
   margin: auto;
+
+  &__item:not(:first-child) {
+   margin-left: 10px;
 }
 
-.social-links__footer li:not(:first-child) {
-  margin-left: 10px;
-}
-
-.social-links__icon-footer {
+  &__icon {
   background: rgba(255, 255, 255, 0.1);
   color: $white-text;
   width: 44px;
@@ -71,18 +70,18 @@
   display: flex;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  & svg {
+    & svg {
     fill: currentColor;
-  }
+    }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $white-text;
-    background-color: $accent-icon;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white-text;
+      background-color: $accent-icon;
+    }
   }
 }
-
 /* Форма для подписки */
 
 /* Шрифт для "присоединяйтесь" и "подпишитесь" в футере */

@@ -1,0 +1,136 @@
+/* Задаём верхнюю границу и верхний паддинг для секции "Портфолио" */
+.portfolio {
+  border-top: 1px solid #ececec;
+  padding-top: 94px;
+
+  &__button {
+  background-color: $ghost-white;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $black-text;
+
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $blue;
+      color: $white-text;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      border: none;
+    }
+  }
+}
+
+/* Задаём flex и паддинги секции nav-buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 50px 0;
+  padding-left: 0px;
+}
+
+.nav-buttons:not(:first-child) {
+  margin-left: 8px;
+}
+
+/* Перечень проектов */
+
+
+/* Сетка проектов на flex */
+
+.container__project-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  margin-left: -30px;
+  margin-top: -30px;
+  margin-bottom: 0px;
+}
+
+.project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+
+  &__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin: auto;
+
+  color: $black-text;
+  }
+
+  &__type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  margin: 4px 0px 0px 0px;
+
+  color: $grey-text;
+  }
+
+  &__card-content {
+  padding: 20px 24px;
+  }
+
+  &__card {
+  border: 1px solid #eeeeee;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+
+/* Делаем оверлей на карточки портфолио */
+
+.project-item__card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding: 63px 24px 63px 24px;
+  margin: 0;
+  color: $white-text;
+}
+
+.thumb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item__card:hover .thumb-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
