@@ -1,0 +1,46 @@
+/* Задаём верхний паддинг секции "Преимущества" */
+.advantages {
+  padding-top: 94px;
+
+/* Задаём характеристики элементов секции "Преимущества" */
+  &__item {
+  width: 270px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  }
+
+&__item:not(:first-child) {
+  margin-left: 30px;
+  }
+
+/* Задаём характеристики для иконок преимуществ */
+&__icon {
+  display: flex;
+  background-color: $ghost-white;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  }
+
+&__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $black-text;
+  }
+
+&__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: $grey-text;
+  }
+}

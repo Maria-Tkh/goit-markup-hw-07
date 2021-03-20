@@ -1,10 +1,14 @@
-@import './utils/modern-normalize';
+@import './base/modern-normalize';
+@import './base/general';
 @import './utils/variables';
-@import './utils/base';
 @import './components/containers';
 @import './components/logo';
 @import './components/header';
 @import './components/footer';
 @import './components/modal';
-@import './components/studio';
 @import './components/portfolio';
+@import './components/hero';
+@import './components/advantages';
+@import './components/services';
+@import './components/team';
+@import './components/clients';
